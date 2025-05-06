@@ -128,11 +128,9 @@
   }
 
   .modal-wrapper {
-    /* flex-center fixed top-0 left-0 right-0 bottom-0 z-modal h-screen w-screen bg-[#00000077] */
     @apply flex-center fixed top-0 left-0 right-0 bottom-0 h-screen w-screen bg-[#00000077] backdrop-blur-lg z-modal animate-fadeIn;
   }
   .modal-container {
-    /* @apply flex flex-col bg-white p-3 rounded-xl h-[80vh] max-w-6xl w-[90vw] max-h-[900px] min-h-96; */
     @apply flex flex-col p-6 bg-white shadow-3xl shadow-neutral-600 rounded-3xl max-w-[90vw] min-h-40 min-w-80;
   }
 
@@ -142,6 +140,10 @@
 
   .nav-drawer {
     @apply absolute top-16 left-0 right-0 flex flex-col gap-1 p-4 bg-white shadow overflow-hidden transition-all;
+  }
+
+  .spinner{
+    @apply size-12 border-[6px] inline-block animate-spin rounded-full border-solid border-secondary border-e-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite];
   }
 }
 

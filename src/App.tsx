@@ -1,11 +1,9 @@
-import Page1 from './pages/Page1'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
   return (
     <>
-      <div className="card">
-        <Page1 />
-      </div>
+      <AppRoutes />
     </>
   )
 }
