@@ -73,8 +73,8 @@ const ModalWrapper = ({
         <div className={classNames('modal-wrapper', className)}>
           <div ref={modalRef} className="relative">
             {showCloseIcon && (
-              <button className="absolute -top-16 right-0" onClick={onClose}>
-                <CloseIcon className="size-12 fill-white md:size-16" />
+              <button className="absolute -top-12 right-0" onClick={onClose}>
+                <CloseIcon className="fill-white size-12" />
               </button>
             )}
             {children}

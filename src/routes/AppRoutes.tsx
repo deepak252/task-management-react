@@ -1,21 +1,24 @@
 import { lazy, Suspense } from 'react'
 import { RouteObject, useRoutes } from 'react-router-dom'
 import { Spinner } from '@/components/Loader'
-import taskRoutes from './taskRoutes'
 const MainLayout = lazy(() => import('@/components/layouts/MainLayout'))
 const PageNotFound = lazy(() => import('@/pages/PageNotFound'))
+const Dashboard = lazy(() => import('@/pages/Dashboard'))
 
 const routes: RouteObject[] = [
   {
     path: '/',
     element: <MainLayout />,
     children: [
-      taskRoutes,
       {
-        path: '*',
-        element: <PageNotFound />,
+        path: '/',
+        element: <Dashboard />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <PageNotFound />,
   },
 ]
 
